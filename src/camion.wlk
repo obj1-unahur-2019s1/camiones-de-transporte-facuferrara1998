@@ -22,5 +22,13 @@ object camion {
 		return cosas.any{ c => c.nivelPeligrosidad() < nivelMaximoPeligrosidad
 		}
 	}
+	method tieneAlgoQuePesaEntre(min, max){//devuelve verdadero o falso
+		cosas.any({ e => e.peso().between(min, max)})//esta entre min y max 
+		//todo lo que pusimos se llama clousure o expresion labda(bloque de codigo)
+	}
+	method cosaMasPesada(){
+		return cosas.max({e => e.peso() })
+	}
+	
 	
 }
